@@ -1,7 +1,32 @@
+<?php 
+  include_once 'connection.php';
+  $title = "";
+  $curPageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);  
+  if($curPageName=="index.php") {
+      $title = "ទំព័រដើម";
+  } elseif($curPageName=="match_history.php") {
+      $title = "ប្រវត្តិប្រកួត";
+  } elseif($curPageName=="news.php") {
+      $title = "ពត៍មាន";
+  } elseif($curPageName=="next_match.php") {
+      $title = "ការប្រកួតបន្ទាប់";
+  } elseif($curPageName=="match_history.php") {
+        $title = "Match History";
+  } elseif($curPageName=="player_rank.php") {
+      $title = "ចំណាត់ថ្នាក់កីឡាករ";
+  } elseif($curPageName=="player.php") {
+      $title = "កីឡាករ";
+  } elseif($curPageName=="about.php") {
+      $title = "អំពីអនុ.មោង";
+  } else {
+      $title = "Not Set";
+  }
+?>
 <!doctype html>
-<html lang="en">
+<html>
   <head>
     <!-- Required meta tags -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -12,7 +37,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Font Awsome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-    <title>ទំព័រដើម</title>
+    <title><?php echo $title ?></title>
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -42,14 +67,8 @@
                     <!--<div class="dropdown-divider"></div>-->
                   </div>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link text-primary dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">អំពី អនុ.មោង</a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="about.php#structure">រចនាសម្ព័ន្ធគ្រប់គ្រង</a>
-                    <a class="dropdown-item" href="about.php#vision">ចក្ខុវិស័យ</a>
-                    <a class="dropdown-item" href="about.php#mission">បេសកកម្ម</a>
-                    <a class="dropdown-item" href="about.php#schoollayout">ប្លង់សាលារៀន</a>
-                  </div>
+                <li class="nav">
+                <a class="nav-link text-primary" href="about.php">អំពីអនុ.មោង</a>
                 </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">

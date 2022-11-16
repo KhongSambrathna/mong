@@ -1,6 +1,17 @@
-<?php include_once 'header.php'?>
-
+<?php
+    include_once 'connection.php';
+    include_once 'header.php';
+    //Get Goalkeeper Player
+    $stmt = $pdo->prepare("SELECT * FROM players WHERE position=1;");
+    $stmt->execute();
+    $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
 <div class="container">
+    <?php
+        foreach ($data as $key => $value) {
+            echo $value['id'] . ' ' . $value['name'] ; 
+        }
+    ?>
     <!-- អ្នកចាំទី -->
     <div class="row justify-content-center koulen mt-5 mb-4">
         <div class="col-12 col-sm-8 col-lg-6">

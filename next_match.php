@@ -11,6 +11,7 @@
         <th scope="col">កាលបរិច្ឆេទ</th>
         <th scope="col">ការប្រកួត</th>
         <th scope="col">ការប្រកួតប្រជែង</th>
+        <th scope="col">ទីលាន</th>
       </tr>
     </thead>
     <tbody>
@@ -19,18 +20,21 @@
         <td>01-OCT-23</td>
         <td>អនុ.មោង VS អនុ...</td>
         <td>មិត្តភាព</td>
+        <td>អនុ.មោង</td>
       </tr>
       <tr>
         <th scope="row">2</th>
         <td>01-OCT-23</td>
         <td>អនុ.មោង VS អនុ...</td>
         <td>មិត្តភាព</td>
+        <td>អនុ.មោង</td>
       </tr>
       <tr>
         <th scope="row">3</th>
         <td>01-OCT-23</td>
         <td>អនុ.មោង VS អនុ...</td>
         <td>មិត្តភាព</td>
+        <td>អនុ.មោង</td>
       </tr>
     </tbody>
   </table>
