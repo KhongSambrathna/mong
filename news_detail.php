@@ -7,7 +7,7 @@
                     <div class="article-img">
                         <img src="https://via.placeholder.com/800x350/87CEFA/000000" title="" alt="" />
                     </div>
-                    <div class="article-title">
+                    <div class="article-title koulen">
                         <h6><a href="#">Lifestyle</a></h6>
                         <h2>They Now Bade Farewell To The Kind But Unseen People</h2>
                         <div class="media">
@@ -15,12 +15,12 @@
                                 <img src="https://bootdey.com/img/Content/avatar/avatar1.png" title="" alt="" />
                             </div>
                             <div class="media-body">
-                                <label>Rachel Roth</label>
+                                <label>អនុវិទ្យាល័យមោង</label>
                                 <span>26 FEB 2020</span>
                             </div>
                         </div>
                     </div>
-                    <div class="article-content">
+                    <div class="article-content battambang">
                         <p>
                             Aenean eleifend ante maecenas pulvinar montes lorem et pede dis dolor pretium donec dictum. Vici consequat justo enim. Venenatis eget adipiscing luctus lorem. Adipiscing veni amet luctus enim sem libero tellus
                             viverra venenatis aliquam. Commodo natoque quam pulvinar elit.
@@ -44,7 +44,7 @@
                             mollit anim id est laborum.
                         </p>
                     </div>
-                    <div class="nav tag-cloud">
+                    <!-- <div class="nav tag-cloud">
                         <a href="#">Design</a>
                         <a href="#">Development</a>
                         <a href="#">Travel</a>
@@ -52,9 +52,9 @@
                         <a href="#">Marketing</a>
                         <a href="#">Research</a>
                         <a href="#">Managment</a>
-                    </div>
+                    </div> -->
                 </article>
-                <div class="contact-form article-comment">
+                <!-- <div class="contact-form article-comment">
                     <h4>Leave a Reply</h4>
                     <form id="contact-form" method="POST">
                         <div class="row">
@@ -80,11 +80,11 @@
                             </div>
                         </div>
                     </form>
-                </div>
+                </div> -->
             </div>
             <div class="col-lg-4 m-15px-tb blog-aside">
                 <!-- Author -->
-                <div class="widget widget-author">
+                <!-- <div class="widget widget-author">
                     <div class="widget-title">
                         <h3>Author</h3>
                     </div>
@@ -102,7 +102,7 @@
                         </div>
                         <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores</p>
                     </div>
-                </div>
+                </div> -->
                 <!-- End Author -->
                 <!-- Trending Post -->
                 <div class="widget widget-post">
@@ -182,7 +182,7 @@
                 </div>
                 <!-- End Latest Post -->
                 <!-- widget Tags -->
-                <div class="widget widget-tags">
+                <!-- <div class="widget widget-tags">
                     <div class="widget-title">
                         <h3>Latest Tags</h3>
                     </div>
@@ -197,7 +197,7 @@
                             <a href="#">Managment</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- End widget Tags -->
             </div>
         </div>

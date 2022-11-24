@@ -1,4 +1,11 @@
-<?php include_once 'header.php'?>
+<?php 
+  include_once 'connection.php';
+  include_once 'header.php';
+  $sql = "SELECT time,date, `match`,field, compitition FROM `match` ORDER BY date DESC LIMIT 3";
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute();
+  $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
   <!-- Slider -->
     <div class="container">
       <div class="pt-3" id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -19,87 +26,48 @@
     <div class="container mt-3">
       <h4 class="koulen text-center my-5">ព្រឹត្ដិការណ៍មកដល់ឆាប់ៗ</h4>
       <div class="row battambang">
+
+        <?php foreach($data as $key => $value){ ?>
           <div class="col-lg-4">
               <div class="card card-margin">
                   <div class="card-header no-border">
-                      <h5 class="card-title">ការប្រកួតមិត្តភាពបាល់ទាត់</h5>
+                      <h5 class="card-title mt-2">ការប្រកួត<?php echo $value['compitition'] ?>រវាង</h5>
                   </div>
                   <div class="card-body pt-0">
                       <div class="widget-49">
                           <div class="widget-49-title-wrapper">
                               <div class="widget-49-date-primary">
-                                  <span class="widget-49-date-day">09</span>
-                                  <span class="widget-49-date-month">apr</span>
+                                  <span class="widget-49-date-day">
+                                    <?php 
+                                      echo "". date("d", strtotime("". $value['date']));
+                                    ?>
+                                  </span>
+                                  <span class="widget-49-date-month">
+                                    <?php 
+                                      $month_num = "".  date("y", strtotime("". $value['date']));
+                                      echo "". substr(date("F", mktime(0, 0, 0, $month_num, 10)),0,3);
+                                    ?>
+                                  </span>
                               </div>
                               <div class="widget-49-meeting-info">
-                                  <span class="widget-49-pro-title">អនុ.មោង VS អនុ.២៨មករា</span>
-                                  <span class="widget-49-meeting-time">3:00 ទៅ 5.30 ម៉ោង</span>
+                                  <span class="widget-49-pro-title"><?php echo $value['match'] ?></span>
+                                  <span class="widget-49-meeting-time">
+                                    <?php 
+                                      echo "ចាប់ផ្ដើមលេងនៅម៉ោង ". date("h:i A", strtotime("". $value['time']));
+                                    ?>
+                                  </span>
                               </div>
                           </div>
                           <ol class="widget-49-meeting-points">
-                              <li class="widget-49-meeting-item"><span>ការប្រកួតនិងចាប់ផ្ដើមនៅវេលាម៉ោង៣:៣០នាទីរសៀលនេះតទៅ ដូច្នេះសូមក្រុមទាំងពីរមកអោយបានដល់កន្លែងប្រកួយមុនម៉ោងដែលបានកំណត់</span></li>
+                              <li class="widget-49-meeting-item"><span>ការប្រកួតនិងចាប់ផ្ដើមនៅវេលាម៉ោង <?php echo ''.date("h:i A", strtotime("". $value['time'])) ?> 
+                              នេះតទៅ ដូច្នេះសូមក្រុមទាំងពីរមកអោយបានដល់ទីលាន<?php echo ''. $value['field'] ?>ឱ្យបានមុនម៉ោងដែលបានកំណត់</span></li>
                           </ol>
-                          <div class="widget-49-meeting-action">
-                              <a href="#" class="btn btn-sm btn-flash-border-primary">អានបន្ថែម</a>
-                          </div>
                       </div>
                   </div>
               </div>
           </div>
-          <div class="col-lg-4">
-            <div class="card card-margin">
-                <div class="card-header no-border">
-                    <h5 class="card-title">ការប្រកួតមិត្តភាពបាល់ទាត់</h5>
-                </div>
-                <div class="card-body pt-0">
-                    <div class="widget-49">
-                        <div class="widget-49-title-wrapper">
-                            <div class="widget-49-date-primary">
-                                <span class="widget-49-date-day">09</span>
-                                <span class="widget-49-date-month">apr</span>
-                            </div>
-                            <div class="widget-49-meeting-info">
-                                <span class="widget-49-pro-title">អនុ.មោង VS អនុ.២៨មករា</span>
-                                <span class="widget-49-meeting-time">3:00 ទៅ 5.30 ម៉ោង</span>
-                            </div>
-                        </div>
-                        <ol class="widget-49-meeting-points">
-                            <li class="widget-49-meeting-item"><span>ការប្រកួតនិងចាប់ផ្ដើមនៅវេលាម៉ោង៣:៣០នាទីរសៀលនេះតទៅ ដូច្នេះសូមក្រុមទាំងពីរមកអោយបានដល់កន្លែងប្រកួយមុនម៉ោងដែលបានកំណត់</span></li>
-                        </ol>
-                        <div class="widget-49-meeting-action">
-                            <a href="#" class="btn btn-sm btn-flash-border-primary">អានបន្ថែម</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card card-margin">
-              <div class="card-header no-border">
-                  <h5 class="card-title">ការប្រកួតមិត្តភាពបាល់ទាត់</h5>
-              </div>
-              <div class="card-body pt-0">
-                  <div class="widget-49">
-                      <div class="widget-49-title-wrapper">
-                          <div class="widget-49-date-primary">
-                              <span class="widget-49-date-day">09</span>
-                              <span class="widget-49-date-month">apr</span>
-                          </div>
-                          <div class="widget-49-meeting-info">
-                              <span class="widget-49-pro-title">អនុ.មោង VS អនុ.២៨មករា</span>
-                              <span class="widget-49-meeting-time">3:00 ទៅ 5.30 ម៉ោង</span>
-                          </div>
-                      </div>
-                      <ol class="widget-49-meeting-points">
-                          <li class="widget-49-meeting-item"><span>ការប្រកួតនិងចាប់ផ្ដើមនៅវេលាម៉ោង៣:៣០នាទីរសៀលនេះតទៅ ដូច្នេះសូមក្រុមទាំងពីរមកអោយបានដល់កន្លែងប្រកួយមុនម៉ោងដែលបានកំណត់</span></li>
-                      </ol>
-                      <div class="widget-49-meeting-action">
-                          <a href="#" class="btn btn-sm btn-flash-border-primary">អានបន្ថែម</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
+        <?php } ?>
+
       </div>
     </div>
     <!-- Lates News -->

@@ -1,4 +1,10 @@
-<?php include_once 'header.php'?>
+<?php 
+  include_once 'connection.php';
+  include_once 'header.php';
+  $stmt = $pdo->prepare("SELECT * FROM `match` WHERE score = '' OR result = '' ORDER BY date DESC;");
+  $stmt->execute();
+  $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
 <div class="container battambang text-nowrap">
 <div class="container">
   <h3 class="koulen text-center my-3">ការប្រកួតខាងមុខ</h3>
@@ -16,26 +22,17 @@
     </thead>
     <tbody>
       <tr>
-        <th scope="row">1</th>
-        <td>01-OCT-23</td>
-        <td>អនុ.មោង VS អនុ...</td>
-        <td>មិត្តភាព</td>
-        <td>អនុ.មោង</td>
+        <?php 
+          $index = 1;
+          foreach ($data as $key => $value) {
+        ?>
+        <th scope="row"><?php echo $index ?></th>
+        <td><?php echo $value['date'] ?></td>
+        <td><?php echo $value['match'] ?></td>
+        <td><?php echo $value['compitition'] ?></td>
+        <td><?php echo $value['field'] ?></td>
       </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>01-OCT-23</td>
-        <td>អនុ.មោង VS អនុ...</td>
-        <td>មិត្តភាព</td>
-        <td>អនុ.មោង</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>01-OCT-23</td>
-        <td>អនុ.មោង VS អនុ...</td>
-        <td>មិត្តភាព</td>
-        <td>អនុ.មោង</td>
-      </tr>
+      <?php $index++; }?>
     </tbody>
   </table>
 </div>

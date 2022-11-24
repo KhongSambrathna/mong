@@ -7,7 +7,7 @@
             <div class="single-footer-widget section_padding_0_130">
               <!-- Footer Logo-->
               <div class="footer-logo mb-3"></div>
-              <p>អនុវិទ្យាល័យមោង គឺជាអនុវិទ្យាល័យមួយដែលស្ថិតនៅក្នុង ឃុំមោង ស្រុកស្រីស្នំ ខេត្តសៀមរាប</p>
+              <p>អនុវិទ្យាល័យមោង គឺជាអនុវិទ្យាល័យមួយដែលស្ថិតនៅក្នុង​ភូមិមោងជើង ឃុំមោង ស្រុកស្រីស្នំ ខេត្តសៀមរាប</p>
               <!-- Copywrite Text-->
               <div class="copywrite-text mb-5">
                 <p class="mb-0">អភិវឌ្ឍន៍គេហទំព័រដោយ ៖<i class="lni-heart mr-1"></i><a class="ml-1" href="https://www.facebook.com/sambrathnajr">ខុង សំប្រាថ្នា</a></p>
@@ -24,7 +24,7 @@
               <!-- Footer Menu-->
               <div class="footer_menu battambang">
                 <ul>
-                  <li><a>ឃុំមោង ស្រុកស្រីស្នំ ខេត្តសៀមរាប</a></li>
+                  <li><a>ភូមិមោងជើង ឃុំមោង ស្រុកស្រីស្នំ ខេត្តសៀមរាប</a></li>
                   <li><a href="https://maps.app.goo.gl/AneCEq83vD659bGS8">ផែនទី​ហ្គូហ្គល</a></li>
                 </ul>
               </div>
@@ -65,11 +65,11 @@
         </div>
       </div>
     </footer>
-    <!-- Optional JavaScript -->
-    <script src="js/script.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Optional JavaScript -->
+    <script src="js/script.js"></script>
   </body>
 </html>

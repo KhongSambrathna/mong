@@ -62,7 +62,7 @@
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="player.php">កីឡាករ</a>
                     <a class="dropdown-item" href="player_rank.php">ចំណាត់ថ្នាក់កីឡាករ</a>
-                    <a class="dropdown-item" href="match_history.php">ប្រវត្តិប្រកួត</a>
+                    <a class="dropdown-item" href="match_history.php?page=1">ប្រវត្តិប្រកួត</a>
                     <a class="dropdown-item" href="next_match.php">ការប្រកួតខាងមុខ</a>
                     <!--<div class="dropdown-divider"></div>-->
                   </div>
@@ -71,10 +71,6 @@
                 <a class="nav-link text-primary" href="about.php">អំពីអនុ.មោង</a>
                 </li>
               </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2 border-primary" type="search" placeholder="ស្វែងរក . . ." aria-label="Search">
-                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-              </form>
             </div>
         </div>
     </nav>
